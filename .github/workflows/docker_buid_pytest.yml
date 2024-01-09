@@ -1,3 +1,4 @@
+---
 name: Build&Test docker image
 
 on:
@@ -18,3 +19,4 @@ jobs:
 
     - name: Test Docker image app
       run: docker run --rm python39_app pytest test_run_app.py
+---
