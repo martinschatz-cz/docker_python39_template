@@ -1,7 +1,7 @@
 name: Build&Test docker image
 
 on:
-  pull:
+  pull_request:
     branches:
       - main
 
