@@ -1,0 +1,20 @@
+name: Build&Test docker image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: docker build -t python39_app .
+
+    - name: Test Docker image app
+      run: docker run --rm python39_app pytest
